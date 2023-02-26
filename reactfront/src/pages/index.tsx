@@ -1,6 +1,5 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
 import Footer from "~/components/Footer";
 import Header from "~/components/Header";
 import HomeHero from "~/components/HomeHero";
@@ -8,9 +7,9 @@ import styles from "~/styles/index.module.css";
 import { useEffect, useState } from "react";
 
 const Home: NextPage = () => {
-    const [firstRandomColor, setFirstRandomColor] = useState<string>("");
-    const [secondRandomColor, setSecondRandomColor] = useState<string>("");
-    const [darkText, setDarkText] = useState<string>("text-zinc-200");
+    //const [firstRandomColor, setFirstRandomColor] = useState<string>("");
+    //const [secondRandomColor, setSecondRandomColor] = useState<string>("");
+    const [darkText] = useState<string>("text-zinc-200");
 
     const generateRandomDarkColor = () => {
         const randomRed = Math.floor(Math.random() * 100) + 30;
@@ -19,30 +18,25 @@ const Home: NextPage = () => {
         return rgbToHex(randomRed, randomGreen, randomBlue);
     }
 
-    const toRGB = (color: any) => {
-        const { style } = new Option();
-        style.color = color;
-        return style.color;
-    }
 
     const setRandomGradientBackground = () => {
         const [colorOne, colorTwo] = [generateRandomDarkColor(), generateRandomDarkColor()];
-        setFirstRandomColor((colorOne));
-        setSecondRandomColor((colorTwo));
+        //setFirstRandomColor((colorOne));
+        //setSecondRandomColor((colorTwo));
         document.body.style.background = `linear-gradient(90deg, ${colorOne} 0%, ${colorTwo} 100%)`;
     };
 
-    const componentToHex = (c: any) => {
-        var hex = c.toString(16);
+    const componentToHex = (c: number) => {
+        const hex = c.toString(16);
         return hex.length == 1 ? "0" + hex : hex;
     }
 
-    const rgbToHex = (r: any, g: any, b: any) => {
+    const rgbToHex = (r: number, g: number, b: number) => {
         return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
     }
     useEffect(() => {
         setRandomGradientBackground();
-    }, []);
+    });
 
     return (
         <>

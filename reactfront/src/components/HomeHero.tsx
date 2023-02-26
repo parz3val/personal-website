@@ -1,5 +1,6 @@
 // Home hero content box
 import Link from "next/link";
+import Image from "next/image";
 export default function HomeHero() {
     return (
     <>
@@ -8,9 +9,9 @@ export default function HomeHero() {
       Hello, world !!!
       </h2>
       <h1 className="text-6xl font-fira-code font-bold">
-      I'm Harry
+      {"I'm Harry"}
       </h1>
-      <img src="/images/profile.png" alt="profile" className="rounded-full h-64 w-64"/>
+      <Image src="/images/profile.png" alt="profile" width="64" height="64" className="rounded-full h-64 w-64"/>
       <h3 className="text-3xl font-fira-code font-bold">
       Software Engineer/CS Enthusiast
       </h3>
