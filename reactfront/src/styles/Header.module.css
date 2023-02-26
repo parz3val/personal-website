@@ -1,0 +1,13 @@
+.solid_line {
+    border: 0.5px solid #bbfffb;
+    margin: 0;
+    margin-bottom: 1.25rem;
+    margin-top: 1.25rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header_titles_bar {
+    margin-left: 2rem;
+}
