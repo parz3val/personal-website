@@ -8,31 +8,31 @@ import styles from "../styles/Header.module.css";
 
 export default function Header() {
     return (
-<>
-<header className={`antialiased  text-2xl font-fira-code 
+        <>
+            <header className={`antialiased  text-2xl font-fira-code 
 `}>
-<nav >
-<hr className={styles.solid_line} />
-<div  className={`${styles.header_titles_bar} flex justify-center`}>
-<div className="flex space-x-80">
-<Link href="/" passHref className=""> 
-<span className={``}>{"# <_$"} </span>
-</Link>
+                <nav >
+                    <hr className={styles.solid_line} />
+                    <div className={`${styles.header_titles_bar} flex justify-center`}>
+                        <div className="flex space-x-80">
+                            <Link href="/" passHref className="">
+                                <span className={``}>{"# <_$"} </span>
+                            </Link>
 
-<Link href="/blogs" passHref> 
-<span> #blogs </span>
-</Link>
+                            <Link href="/Blogs" passHref>
+                                <span> #blogs </span>
+                            </Link>
 
-<Link href="/projects" passHref> 
-<span> #projects </span>
-</Link>
+                            <Link href="/projects" passHref>
+                                <span> #projects </span>
+                            </Link>
 
-</div>
-</div>
-<hr className={styles.solid_line} />
-</nav>
-</header>
-</>
+                        </div>
+                    </div>
+                    <hr className={styles.solid_line} />
+                </nav>
+            </header>
+        </>
     );
 }
 
