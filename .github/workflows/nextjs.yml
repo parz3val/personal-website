@@ -51,9 +51,9 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
+          path: ./reactfront
           node-version: "16"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-          path: ./reactfront
       - name: Setup Pages
         uses: actions/configure-pages@v3
         with:
