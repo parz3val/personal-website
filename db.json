@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "title": "Create a shortcut utility for windows in rust",
+        "description": "Rust is one of the most popular language. In this tutorial,
+        I will teach you how to create a shortcut utility for windows in rust.",
+        "date": "2022-June-07",
+    },
+]

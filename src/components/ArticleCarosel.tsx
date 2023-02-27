@@ -2,12 +2,10 @@
 import style from '../styles/ArticleCarosel.module.css';
 //
 
-type Article = {
+export type Article = {
     title: string;
     description: string;
-    image: string;
     date: string;
-    link: string;
 }
 type ArticleCroselProps = {
     articles: Article[];
@@ -36,7 +34,7 @@ function ArticleCard({ article }: { article: Article }) {
     );
 
 }
-export default function ArticleCarosel({ articles }: ArticleCroselProps) {
+export function ArticleCarosel({ articles }: ArticleCroselProps) {
     return (
         <>
             <div className={`carosel-box`}>

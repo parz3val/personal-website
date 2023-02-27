@@ -1,3 +1,4 @@
+
 export const generateRandomDarkColor = () => {
     const randomRed = Math.floor(Math.random() * 100) + 30;
     const randomGreen = Math.floor(Math.random() * 100) + 30;
@@ -39,3 +40,9 @@ export const mockArticleData = () => {
 
     ]
 }
+
+export async function fetchArticleDb() {
+    const response = await fetch("/blogs/db.json");
+    const data = await response.json();
+    return data
+  }

@@ -4,16 +4,21 @@ import { useEffect, useState } from "react";
 import Footer from "~/components/Footer";
 import Header from "~/components/Header";
 import styles from "~/styles/index.module.css";
-import ArticleCarosel from "~/components/ArticleCarosel";
+import  {ArticleCarosel, Article } from "~/components/ArticleCarosel";
 import { setRandomGradientBackground } from "~/utils";
-import {mockArticleData} from "~/utils";
+import {mockArticleData, fetchArticleDb } from "~/utils";
 
 const Blog: NextPage = () => {
     const [darkText] = useState<string>("text-zinc-100");
-    const articlesMockData = mockArticleData();
+    const [articlesMockData, setArticlesMockData] = useState<Article[]>(mockArticleData);
     useEffect(() => {
         setRandomGradientBackground();
-    });
+        fetchArticleDb().then((data) => {
+            console.log(data);
+            setArticlesMockData(data);
+        })
+        
+    }, []);
     return (
         <>
             <Head>
